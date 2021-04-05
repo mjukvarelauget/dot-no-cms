@@ -37,6 +37,11 @@ export default {
       },
     },
     {
+      title: "Image alt text",
+      name: "imgAlt",
+      type: "string",
+    },
+    {
       name: "categories",
       title: "Categories",
       type: "array",
@@ -46,15 +51,6 @@ export default {
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
-    },
-    {
-      title: "Link",
-      name: "href",
-      type: "url",
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ["http", "https", "mailto", "tel"],
-        }),
     },
     {
       name: "body",
