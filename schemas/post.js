@@ -24,6 +24,11 @@ export default {
       to: { type: "author" },
     },
     {
+      name: "ingress",
+      title: "Ingress",
+      type: "blockContent",
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",
