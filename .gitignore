@@ -69,3 +69,7 @@ yarn.lock
 
 # Secrets
 .env.development
+
+# Sanity
+dist/
+.sanity/

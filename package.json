@@ -8,24 +8,20 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "dev": "sanity dev"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.7.1",
-    "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.7.1",
-    "@sanity/default-layout": "^2.7.1",
-    "@sanity/default-login": "^2.7.0",
-    "@sanity/desk-tool": "^2.7.1",
-    "@sanity/vision": "^2.7.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0"
+    "@sanity/vision": "^3.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.11.1",
+    "styled-components": "^5.3.10",
+    "typescript": "^5.0.4"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:mjukvarelauget/dot-no-cms.git"
