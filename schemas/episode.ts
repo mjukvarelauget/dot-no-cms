@@ -109,18 +109,18 @@ export default defineField({
       name: "coverArt",
       title: "Cover art",
       type: "image",
-    },
-  ],
-  orderings: [
-    {
-      title: "Publish Date, New",
-      name: "publishDateDesc",
-      by: [{ field: "schedule.publish", direction: "desc" }],
-    },
-    {
-      title: "Publish Date, Old",
-      name: "publishDateAsc",
-      by: [{ field: "schedule.publish", direction: "asc" }],
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+        },
+        {
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
   ],
   preview: {
@@ -134,7 +134,7 @@ export default defineField({
     prepare({ title, subtitle, description, media, schedule }) {
       return {
         title,
-        esubtitle: `${new Date(schedule.publish).toDateString()} – ${subtitle}`,
+        subtitle,
         description,
         media,
       };

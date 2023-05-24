@@ -28,8 +28,20 @@ export default {
       title: "Main image",
       type: "image",
       options: {
-        hotspot: true,
+        hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+        },
+        {
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       name: "publishedAt",

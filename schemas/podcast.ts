@@ -42,8 +42,21 @@ export default defineField({
       name: "coverArt",
       title: "Cover art",
       type: "image",
-      description:
-        "The image should be either jpg or png. Preferably 3000 x 3000, minimum 1400 x 1400 pixels.",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+        },
+        {
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       name: "language",
