@@ -5,6 +5,7 @@ import author from "./author";
 import mjukvare from "./mjukvare";
 import episode from "./episode";
 import podcast from "./podcast";
+import source from "./source";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default [
@@ -15,4 +16,5 @@ export default [
   blockContent,
   episode,
   podcast,
+  source,
 ];

@@ -1,8 +1,10 @@
 import { Rule, defineField } from "sanity";
+import { MdPlayCircleOutline } from "react-icons/md";
 
 export default defineField({
   name: "episode",
   title: "Episode",
+  icon: MdPlayCircleOutline,
   type: "document",
   fields: [
     {
@@ -121,6 +123,12 @@ export default defineField({
           title: "Attribution",
         },
       ],
+    },
+    {
+      name: "notes",
+      type: "reference",
+      title: "Tilhørende post",
+      to: [{ type: "post" }],
     },
   ],
   preview: {

@@ -1,6 +1,10 @@
-export default {
+import { defineField } from "sanity";
+import { MdArticle } from "react-icons/md";
+
+export default defineField({
   name: "post",
   title: "Post",
+  icon: MdArticle,
   type: "document",
   fields: [
     {
@@ -69,6 +73,12 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "sources",
+      title: "Kilder",
+      type: "array",
+      of: [{ type: "reference", to: { type: "source" } }],
+    },
   ],
 
   preview: {
@@ -84,4 +94,4 @@ export default {
       });
     },
   },
-};
+});

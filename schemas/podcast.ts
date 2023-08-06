@@ -66,12 +66,35 @@ export default defineField({
         list: ["Engelsk", "Norsk"],
       },
     },
-    // {
-    //   name: 'itunes',
-    //   title: 'iTunes settings',
-    //   type: 'itunes',
-    //   description: 'iTunes has extra stuff',
-    // },
+    {
+      name: "externalLinks",
+      type: "array",
+      title: "Externals",
+      description: "Other places to listen or follow the pod",
+      of: [
+        {
+          name: "Link",
+          type: "object",
+          fields: [
+            {
+              title: "Name",
+              name: "label",
+              type: "string",
+            },
+            {
+              title: "URL",
+              name: "href",
+              type: "url",
+            },
+            {
+              title: "Icon",
+              name: "icon",
+              type: "image",
+            },
+          ],
+        },
+      ],
+    },
   ],
   preview: {
     select: {
